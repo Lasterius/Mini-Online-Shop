@@ -1,0 +1,116 @@
+@import './_vars.scss';
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .card__wrapper {
+    height: 350px;
+  }
+
+  .modal__content {
+    width: 50vw;
+  }
+
+  .search__wrapper {
+    width: 85%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 22px;
+  }
+
+  /******** Header ********/
+  .header {
+    gap: 0;
+  }
+
+  .topComponents {
+    justify-content: normal;
+  }
+
+  .botComponents {
+    align-items: flex-end;
+  }
+
+  /******** Search ********/
+  .search__wrapper {
+    width: 30%;
+  }
+
+  /**** Card *****/
+  .card__wrapper {
+    width: 32%;
+    height: 400px;
+  }
+
+  .modal__content {
+    width: 50vw;
+  }
+
+  .modal__info {
+    font-size: 30px;
+  }
+
+  /****** Navigation *******/
+
+  .nav__wrapper {
+    font-size: 30px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .burger__wrapper {
+    display: none;
+  }
+
+  .navbar {
+    transform: translateX(100%) !important;
+  }
+
+  .navbar__header {
+    display: none;
+  }
+
+  .navbar-desktop {
+    width: 60%;
+    display: flex;
+  }
+
+  .navbar__content-desktop {
+    display: flex;
+    width: 100%;
+  }
+
+  .navbar__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    li {
+      display: flex;
+      text-transform: uppercase;
+      font-style: normal;
+      font-weight: bold;
+      line-height: 150%;
+      padding-right: 5px;
+      border: 5px black;
+      border-style: inset inset none none;
+
+      a {
+        text-decoration: none;
+        color: $dark;
+        font-size: 25px;
+
+        &:hover {
+          color: $bg_modal;
+          transition: all 0.4s;
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

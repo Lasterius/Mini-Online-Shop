@@ -1,0 +1,59 @@
+@import './_vars.scss';
+
+.category__wrapper.active {
+  transform: scale(1);
+}
+
+.category__wrapper {
+  position: fixed;
+  top: 100px;
+  left: 0;
+  min-height: auto;
+  width: 200px;
+  background-color: $bg_modal;
+  transform: scale(0);
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 4px double black;
+  border-radius: 5%;
+
+  .categories {
+    width: 100%;
+    text-align: center;
+    border: 1px solid black;
+    text-transform: uppercase;
+
+    &:first-child {
+      margin-top: 10px;
+    }
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  .category__buttonsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .category__button {
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    border: none;
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: $bg_modal;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.4s;
+    }
+  }
+}

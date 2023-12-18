@@ -1,0 +1,76 @@
+@import './_vars.scss';
+
+.modal__wrapper.active {
+  transform: scale(1);
+  transition: all 0.2s;
+  pointer-events: all;
+}
+
+.modal__wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 100px;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0);
+  transition: all 0.2s;
+  pointer-events: none;
+}
+
+.modal__content {
+  background-color: var(--background-card);
+  color: var(--text-card);
+  width: 70vw;
+  height: 70vh;
+  margin-top: -100px;
+  overflow: scroll;
+  border: 2px solid black;
+
+  .modal__button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 2rem;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.4s;
+    }
+  }
+
+  .modal__img {
+    width: 100%;
+    height: 50%;
+    border-bottom: 2px solid black;
+  }
+
+  .modal__info {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .modal__title {
+    font-size: 1em;
+  }
+
+  .modal__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .modal__description,
+  .modal__category,
+  .modal__price,
+  .modal__rating {
+    font-size: 0.7em;
+  }
+}

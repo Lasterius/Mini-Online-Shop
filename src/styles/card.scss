@@ -1,0 +1,64 @@
+@import './_vars.scss';
+
+.card__wrapper {
+  width: 47%;
+  height: 300px;
+  margin: 5px auto;
+  white-space: nowrap;
+  background-color: var(--background-card);
+  color: var(--text-card);
+  cursor: pointer;
+  border: 1px solid var(--background-card);
+
+  &:hover {
+    transform: scale(1.02);
+    transition: 0.4s;
+  }
+
+  .card__img {
+    height: 70%;
+    width: 100%;
+  }
+
+  .card__info {
+    padding: 5px;
+  }
+  .card__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.8em;
+    font-weight: normal;
+  }
+
+  .card__description {
+    display: none;
+  }
+
+  .card__category {
+    display: none;
+  }
+
+  .card__rating {
+    display: flex;
+    gap: 5px;
+  }
+
+  .card__price {
+    font-weight: bold;
+    font-size: 1.3em;
+
+    .price__other {
+      font-size: 0.9em;
+    }
+  }
+
+  .rate__star {
+    color: rgb(254, 130, 5);
+  }
+
+  .card__rate,
+  .card__count {
+    font-size: 0.8em;
+    opacity: 0.85;
+  }
+}

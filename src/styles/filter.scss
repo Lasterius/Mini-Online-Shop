@@ -1,0 +1,48 @@
+@import './_vars.scss';
+
+.filter__wrapper.active {
+  transform: scale(1);
+}
+
+.filter__wrapper {
+  position: fixed;
+  top: 100px;
+  right: 0;
+  min-height: auto;
+  width: auto;
+  background-color: $bg_modal;
+  transform: scale(0);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: 4px double black;
+  border-radius: 5%;
+
+  .filter__title {
+    text-align: center;
+  }
+
+  .filter__buttonsBlock {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .filter__button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: none;
+    opacity: 0.4;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 5px;
+    background-color: $bg_modal;
+
+    &:hover {
+      opacity: 1;
+      transition: all 0.4s;
+    }
+  }
+}
