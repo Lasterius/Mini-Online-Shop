@@ -7,7 +7,7 @@ export const Search = () => {
   const dispatch = useAppDispatch();
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setSearch(event.currentTarget.value));
+    dispatch(setSearch(event.currentTarget.value.toLowerCase()));
   };
 
   return (
