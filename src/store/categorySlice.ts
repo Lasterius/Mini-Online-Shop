@@ -7,7 +7,14 @@ export const loadCategories = createAsyncThunk(
   'product/loadCategories',
   async () => {
     const response = await axios.get(
-      'https://fakestoreapi.com/products/categories'
+      'https://fakestoreapi.com/products/categories',
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      }
     );
     return response.data;
   }
@@ -17,7 +24,14 @@ export const loadCardsByCategory = createAsyncThunk<ICard[], string>(
   'product/loadCardsByCategory',
   async (categoryName) => {
     const response = await axios.get(
-      `https://fakestoreapi.com/products/category/${categoryName}`
+      `https://fakestoreapi.com/products/category/${categoryName}`,
+      {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          Accept: 'application/json',
+          'Content-Type': 'application/json',
+        },
+      }
     );
     return response.data;
   }

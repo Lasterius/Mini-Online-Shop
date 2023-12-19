@@ -16,6 +16,11 @@ export const Cards = () => {
     const fetchCards = async () => {
       try {
         const response = await axios.get('https://fakestoreapi.com/products/', {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+          },
           params: {
             limit: cardLimit(),
           },
